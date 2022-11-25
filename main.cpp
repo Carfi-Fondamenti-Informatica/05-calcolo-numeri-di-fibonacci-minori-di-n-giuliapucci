@@ -2,23 +2,27 @@
 using namespace std;
 
 int main() {
-   int n1 = 1;
-    int n2 = 1;
-    int n;
-    cin >> n;
-    int i=3;
-    if (n >= 2) {
-        cout << n1 << endl;
-        cout << n2 << endl;
-        while (i++ <= n) {
-            cout << n1 + n2 << endl;
-            if (n1 < n2)
-                n1 += n2;
-            else n2 += n1;
-        }
-    }else if (n == 1){
-        cout << "1" << endl;
-
-    }
+int a=1;
+int b=0;
+int c=0;
+int n=0;
+int i;
+cin >> n;
+ if (n>2) {
+     cout << a << endl;
+     for (i=0;i <= n;i++) {
+         c=a+b;
+         b=a;
+         a=c;
+         if (c<=n) {
+             cout << c << endl;
+         }
+     }
+ } else if (n==1) {
+     cout << a << endl;
+ } else if (n==2) {
+     cout << "1" << endl;
+     cout << "1" << endl;
+ }
    return 0;
 }
